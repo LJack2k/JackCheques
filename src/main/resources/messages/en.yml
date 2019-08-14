@@ -1,0 +1,58 @@
+#
+#   This file has been inspired by the guys at DiscordSRV. They make a very awesome
+#   Discord plugin for Spigot that I recommend to everybody. Since I'm a beginner
+#   coder I learned a lot from their code. Copied a lot of the structure of DiscordSRV
+#   because it is so damm good.
+#
+#   You should totaly check them out at https://www.spigotmc.org/resources/discordsrv.18494/
+#   or their github https://github.com/Scarsz/DiscordSRV
+#
+
+NotIngamePlayer: "Sorry, you need to be a ingame player."
+NoCommandPermission: "You don't have permission for this command."
+CurrentVersion: "Current version is: "
+ChatHeaderVersionInformation: "Version Information"
+
+HelpCommandHeader: "Command Help"
+HelpCommand: "Shows this help."
+HelpEmptyCommand: "Shows all your shops that are out of stock."
+HelpReloadCommand: "Reloads the plugins config. Does not reconnect database!"
+HelpSaveCommand: "Save the plugin data to the config."
+HelpDebugCommand: "Enable or disable debug mode. Set to 0 (OFF), 1 (BASIC) or 2 (FULL)."
+HelpVersionCommand: "Shows version information"
+
+HelpVoucherDescriptionNoPermission: "You don't permissions to set a description"
+HelpVoucherDescriptionHasPermission: "You have have permissions to use a description"
+HelpChequeDescriptionNoPermission: "You don't permissions to set a description"
+HelpChequeDescriptionHasPermission: "You have permissions to use a description"
+
+
+HelpWitdrawCommand: "Withdraw money from your balance and transfer it into a cheque"
+
+HelpVoucherHeader: "Voucher Command Help"
+HelpWithdrawHeader: "Withdraw Command Help"
+
+SomethingWrong: "Sorry! Something went wrong."
+NegativeAmount: "Negative amounts is not allowed."
+NoAmountGiven: "Please specify the amount"
+YourInventoryFull: "Sorry, your inventory is full!"
+PlayerInventoryFull: "Sorry, player inventory is full!"
+NoPermissionDescription: "No permissions to set a description"
+VoucherAmountError: "Error creating voucher, given value is not a correct amount."
+ChequeAmountError: "Error creating cheque, given value is not a correct amount."
+NotEnoughMoney: "You don't have enough money to withdraw"
+VoucherCantFindPlayer: "The provided player %s can't be found"
+VoucherNoPlayerGiven: "No player name is provided"
+VoucherGiven: "Player %s received the voucher in the inventory"
+VoucherReceived: "You received a voucher in your inventory!"
+ChequeCreated: "Cheque successfully created"
+
+# Tooltip settings
+Cheque: "Cheque"
+Voucher: "Voucher"
+Amount: "Value"
+SignedBy: "Sign by"
+IssuedTo: "Issued to"
+Description: "Description"
+UseCheque: "Right click to cash in cheque"
+UseVoucher: "Right click to cash in voucher"

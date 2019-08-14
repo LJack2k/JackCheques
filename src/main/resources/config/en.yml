@@ -1,0 +1,17 @@
+# Don't touch pls
+ConfigVersion: "${project.version}"
+
+# Debug options, don't touch unless needed
+#
+# DebugLevel: 0 = no debug, 1 = debug, 2 = debug with stack traces
+#
+DebugLevel: 1
+ForcedLanguage: EN
+
+
+# Note: The withdraw/deposit messages are from Essentials
+# Currency prefix
+CurrencyPrefix: ""
+
+# Currency suffix
+CurrencySuffix: " Coins"

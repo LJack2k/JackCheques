@@ -1,0 +1,19 @@
+name: ${pluginname}
+main: ${mainclass}
+version: ${project.version}
+api-version: ${apiversion}
+author: ${developer}
+description: ${description}
+depend: [Essentials, Vault]
+commands:
+  jackcheques:
+    description: Main command. See /jackcheques help for more information
+    usage: /jackcheques
+  withdraw:
+    description: Withdraw money and returns it in the form of a cheque
+    usage: /withdraw <amount> <description>
+    permission: jackcheques.withdraw
+  voucher:
+    description: Creates a voucher and give it to a player
+    usage: /voucher <player> <amount> <description>
+    permission: jackcheques.voucher
