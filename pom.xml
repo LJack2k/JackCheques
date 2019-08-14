@@ -18,6 +18,11 @@
         </license>
     </licenses>
 
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/LJack2k/JackCheques/issues</url>
+    </issueManagement>
+
     <properties>
         <pluginname>JackCheques</pluginname>
         <mainclass>com.ljack2k.JackCheques.JackCheques</mainclass>
