@@ -22,6 +22,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -60,6 +61,12 @@ public class JackCheques extends JavaPlugin {
     static String pluginName = "";                  // Filled by Bukkit
     @Getter
     static String version = "";             // Filled by Bukkit
+
+    @Getter
+    static Material chequeMaterial = Material.MAP;
+
+    @Getter
+    static Material voucherMaterial = Material.MAP;
 
     public static JackCheques getPlugin() {
         return getPlugin(JackCheques.class);
@@ -104,7 +111,7 @@ public class JackCheques extends JavaPlugin {
     public void registerEvents() {
         PluginManager pm = Bukkit.getServer().getPluginManager();
         pm.registerEvents(new EventPlayerInteract(this), this);
-        pm.registerEvents(new EventInventory(this), this);
+        //pm.registerEvents(new EventInventory(this), this);
         JackCheques.debug("Events Registered");
     }
 

@@ -15,3 +15,5 @@ CurrencyPrefix: ""
 
 # Currency suffix
 CurrencySuffix: " Coins"
+
+MinimumChequeAmount: 1

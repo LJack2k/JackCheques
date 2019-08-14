@@ -4,7 +4,6 @@ import com.ljack2k.JackCheques.JackCheques;
 import com.ljack2k.JackCheques.Utils.LangUtil;
 import net.ess3.api.MaxMoneyException;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -38,21 +37,17 @@ public class EventPlayerInteract implements Listener {
 			ItemStack item = event.getItem();
 			ItemMeta im = item.getItemMeta();
 
-			if (item.getType() == Material.PAPER) {
+			if (im != null) {
 				if (im.getPersistentDataContainer().has(keyPlugin, PersistentDataType.STRING) &&
 					im.getPersistentDataContainer().has(keyAmount, PersistentDataType.DOUBLE)) {
 					if (im.getPersistentDataContainer().get(keyPlugin, PersistentDataType.STRING).equals(plugin.getName())) {
 						double amount = im.getPersistentDataContainer().get(keyAmount, PersistentDataType.DOUBLE);
-						if (amount > 0) {
-							try {
-								plugin.essentials.getUser(event.getPlayer()).giveMoney(BigDecimal.valueOf(amount));
-								item.setAmount(item.getAmount() - 1);
-							} catch (MaxMoneyException e) {
-								plugin.sendChatMessage(event.getPlayer(), ChatColor.RED + "" + LangUtil.Message.SOMETHING_WRONG);
-								plugin.debug(e.toString());
-							}
-						} else {
-							plugin.sendChatMessage(event.getPlayer(), ChatColor.RED + "" + LangUtil.Message.NEGATIVE_AMOUNT);
+						try {
+							plugin.essentials.getUser(event.getPlayer()).giveMoney(BigDecimal.valueOf(amount));
+							item.setAmount(item.getAmount() - 1);
+						} catch (MaxMoneyException e) {
+							plugin.sendChatMessage(event.getPlayer(), ChatColor.RED + "" + LangUtil.Message.SOMETHING_WRONG);
+							plugin.debug(e.toString());
 						}
 						event.setCancelled(true);
 					}

@@ -142,7 +142,7 @@ public class CommandVoucher  implements CommandExecutor {
 
     public ItemStack createBankNote(Player player, double amount, String description) {
 // Create new item
-        ItemStack itemStack = new ItemStack(Material.PAPER);
+        ItemStack itemStack = new ItemStack(plugin.getVoucherMaterial());
 
         // Get meta data
         ItemMeta itemMeta = itemStack.getItemMeta();

@@ -3,10 +3,12 @@ package com.ljack2k.JackCheques.Listeners;
 import com.ljack2k.JackCheques.JackCheques;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -64,19 +66,24 @@ public class EventInventory implements Listener {
                     if (itemMeta.getPersistentDataContainer().has(keyPlugin, PersistentDataType.STRING)) {
                         if (itemMeta.getPersistentDataContainer().get(keyPlugin, PersistentDataType.STRING).equals(plugin.getName())) {
                             event.setCancelled(true);
+                            event.setResult(Event.Result.DENY);
                         }
                     }
                 }
             }
         }
 
-        plugin.info(String.format("RawSlot: %s | Slot: %s | Cursor: %s | ClickedInventory: %s | Inventory: %s"
+        plugin.debug(String.format("RawSlot: %s | Slot: %s | Cursor: %s | ClickedInventory: %s | Inventory: %s"
                                 , event.getRawSlot()
                                 , event.getSlot()
                                 , event.getCursor().getType()
                                 , event.getClickedInventory().getType().toString()
                                 , event.getView().getType().toString()
         ));
+    }
+
+    private void onInventoryUpdateListener(InventoryDragEvent event) {
+
     }
 
 }

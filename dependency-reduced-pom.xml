@@ -4,7 +4,7 @@
   <groupId>com.ljack2k</groupId>
   <artifactId>JackCheques</artifactId>
   <name>JackCheques-Spigot</name>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
   <description>A Cheques System</description>
   <licenses>
     <license>

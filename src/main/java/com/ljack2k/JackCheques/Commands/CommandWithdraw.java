@@ -64,10 +64,10 @@ public class CommandWithdraw implements CommandExecutor {
                     }
 
                     // Negative amounts are not allowed
-                    if (amount > 0) {
+                    if (amount >= plugin.getConfig().getInt("MinimumChequeAmount")) {
 
                         // Create new item
-                        ItemStack itemStack = new ItemStack(Material.PAPER);
+                        ItemStack itemStack = new ItemStack(plugin.getChequeMaterial());
 
                         // Get meta data
                         ItemMeta itemMeta = itemStack.getItemMeta();
@@ -141,7 +141,7 @@ public class CommandWithdraw implements CommandExecutor {
                         }
                     } else {
                         // No negative amounts
-                        plugin.sendChatMessage(player, ChatColor.RED + "" + LangUtil.Message.NEGATIVE_AMOUNT);
+                        plugin.sendChatMessage(player, ChatColor.RED + "" + String.format("" + LangUtil.Message.NEGATIVE_AMOUNT, plugin.getConfig().getInt("MinimumChequeAmount")));
                     }
 
                 } else {

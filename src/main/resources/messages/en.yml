@@ -8,17 +8,17 @@
 #   or their github https://github.com/Scarsz/DiscordSRV
 #
 
-NotIngamePlayer: "Sorry, you need to be a ingame player."
-NoCommandPermission: "You don't have permission for this command."
+NotIngamePlayer: "Sorry, you need to be a ingame player"
+NoCommandPermission: "You don't have permission for this command"
 CurrentVersion: "Current version is: "
 ChatHeaderVersionInformation: "Version Information"
 
 HelpCommandHeader: "Command Help"
-HelpCommand: "Shows this help."
-HelpEmptyCommand: "Shows all your shops that are out of stock."
+HelpCommand: "Shows this help"
+HelpEmptyCommand: "Shows all your shops that are out of stock"
 HelpReloadCommand: "Reloads the plugins config. Does not reconnect database!"
-HelpSaveCommand: "Save the plugin data to the config."
-HelpDebugCommand: "Enable or disable debug mode. Set to 0 (OFF), 1 (BASIC) or 2 (FULL)."
+HelpSaveCommand: "Save the plugin data to the config"
+HelpDebugCommand: "Enable or disable debug mode. Set to 0 (OFF), 1 (BASIC) or 2 (FULL)"
 HelpVersionCommand: "Shows version information"
 
 HelpVoucherDescriptionNoPermission: "You don't permissions to set a description"
@@ -32,14 +32,14 @@ HelpWitdrawCommand: "Withdraw money from your balance and transfer it into a che
 HelpVoucherHeader: "Voucher Command Help"
 HelpWithdrawHeader: "Withdraw Command Help"
 
-SomethingWrong: "Sorry! Something went wrong."
-NegativeAmount: "Negative amounts is not allowed."
+SomethingWrong: "Sorry! Something went wrong"
+NegativeAmount: "Amount needs to be bigger then %s"
 NoAmountGiven: "Please specify the amount"
 YourInventoryFull: "Sorry, your inventory is full!"
 PlayerInventoryFull: "Sorry, player inventory is full!"
 NoPermissionDescription: "No permissions to set a description"
-VoucherAmountError: "Error creating voucher, given value is not a correct amount."
-ChequeAmountError: "Error creating cheque, given value is not a correct amount."
+VoucherAmountError: "Error creating voucher, given value is not a correct amount"
+ChequeAmountError: "Error creating cheque, given value is not a correct amount"
 NotEnoughMoney: "You don't have enough money to withdraw"
 VoucherCantFindPlayer: "The provided player %s can't be found"
 VoucherNoPlayerGiven: "No player name is provided"
